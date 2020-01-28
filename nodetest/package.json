@@ -1,0 +1,16 @@
+{
+  "name": "nodetest",
+  "version": "1.0.0",
+  "description": "Books API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Econtreras",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "random-year": "^1.0.2",
+    "sqlite3": "^4.1.1"
+  }
+}

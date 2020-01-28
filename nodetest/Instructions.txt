@@ -1,0 +1,27 @@
+* System API specifications
+
+The service currently just supports the GET method on the following Endpoints:           
+            /book     
+            /book/{bookId} 
+            /book/{bookId}/page/ 
+            /book/{bookId}/page/{pageId}
+{bookId} : The identifier of the book that you are trying to retrieve
+{pageId} : the Page number that you are trying to access
+
+* Note:
+this information is sent to the user in case the service recieves a request to /
+if the service recieves any other HTTP methods it will send an Unsuported Method exception
+
+* In order to use the system please follow these steps:
+
+The system will be using the port 8080 by default in order to change the default port use the --PORT parameter
+by default the system will be using the database 'books.db' to change the default Database file use the --DB parameter
+please note that this defaults can be changed by the user by editing the 'Config.json' file
+Example
+this will run the application using the port 9090 and a database file name example.DB located in the user`s home folder
+
+node App.js --PORT 9090 --DB ~/example.DB
+
+* Caveats
+If the provided file is not found or isnt a valid database for the system the system will autogenerate a database file named 'books.db'
+located in the current folder where the application was run this database will be filled with dummy data for the seeding/testing of the system.
